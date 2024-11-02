@@ -1,0 +1,3 @@
+Instance ID: eipalloc-058e2037a954152bf
+Public IP: 3.222.93.206
+AZ: us-east-1c
