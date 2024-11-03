@@ -1,1 +1,1 @@
-Déployer Wordpress a l'aide des manifeste.
+Déployer Wordpress a l'aide des manifests.
