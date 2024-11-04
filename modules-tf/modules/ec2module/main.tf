@@ -52,7 +52,10 @@ resource "aws_security_group" "sg" {
 resource "aws_eip" "eip" {
     instance = aws_instance.ec2.id
     provisioner "local-exec" {
-        command = "echo PUBLIC IP: ${aws_eip.eip.public_ip} ; ID: ${aws_instance.ec2.id} ; AZ: ${aws_instance.ec2.availability_zone}; >> infos_ec2.txt"
+     command = <<EOT
+      echo "Instance ID: ${self.id}" > infos.txt
+      echo "Public IP: ${aws_eip.eip.public_ip}" >> infos.txt
+      echo "AZ: ${aws_instance.ec2.availability_zone}" >> infos.txt
+    EOT
     }
-  
 }
